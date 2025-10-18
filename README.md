@@ -12,7 +12,7 @@
 4. ##### **CustomOAuthService** -> our custom implementation of OidcUserService is called from **OidcAuthorizationCodeAuthenticationProvider** , here we save user info in db
 5. ##### **CustomSuccessHandler** -> our custom implementation of SimpleUrlAuthenticationSuccessHandler is called as we continue on filter chain , here we generate the jwt
 
-#### Generally Front end hits this url -> localhost:8080/oauth2/authorization/google  this url is spring managed url so that spring oauth flow can intercepts it and build a googles authorization url https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?
+#### Generally Front end hits this url -> localhost:8080/oauth2/authorization/google  and  /login/oauth2/code/google these url are spring managed URLs so that spring oauth flow can intercepts it and build a googles authorization url https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?
 #### Googles authorization url is populated by client cide, secret, scope in query param and on response we get a login page this is all done by **OAuth2AuthorizationRequestRedirectFilter**
 [//]: # (FLOW CHART FROM CHAT GPT)
 
